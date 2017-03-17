@@ -43,4 +43,4 @@ const getHexagonHtml = image => ({ ...image, html: imageToHexagonHtml(image) })
 export const imageToHexagon =
     pipe(getImageOptions,
          getHexagonHtml,
-         x => replaceDomWithHtml(x.html)(x.dom))
+         ({ html, dom }) => replaceDomWithHtml(html)(dom))
